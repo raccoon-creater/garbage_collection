@@ -2,6 +2,7 @@
 
 //画像投稿・透過・編集機能
 require_once __DIR__ . '/uploader.php';
+require_once __DIR__ . '/../util.php';
 
 ini_set('display_errors',1);
 define('MAX_FILE_SIZE',1 * 1024 * 2048);    //2MB
@@ -14,11 +15,6 @@ define('THUMBNAIL_DIR', __DIR__ . '/thumbs');  //投稿され形を整えられ�
 if(!function_exists('imagecreatetruecolor')){
     echo 'GD not installed';
     exit;
-}
-
-//エスケープ処理
-function h($s){
-    return htmlspecialchars($s,ENT_QUOTES,'UTF-8');
 }
 
 $uploader = new ImageUploader();
