@@ -42,14 +42,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <!-- ここまで -->
 </head>
 <body>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo h(MAX_FILE_SIZE); ?>">
         <input type="file" name="image"><br>
-        レア度：<input type="radio" name="rarity">1
-            <input type="radio" name="rarity">2
-            <input type="radio" name="rarity">3
-            <input type="radio" name="rarity">4
-            <input type="radio" name="rarity">5<br>
+        レア度：<input type="radio" name="rarity" value="1">1
+            <input type="radio" name="rarity" value="2">2
+            <input type="radio" name="rarity" value="3">3
+            <input type="radio" name="rarity" value="4">4
+            <input type="radio" name="rarity" value="5">5<br>
         入手場所：<input type="text" name="get_place"><br>
         <input type="submit" value="upload">
     </form>

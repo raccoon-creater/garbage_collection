@@ -2,6 +2,7 @@
 //uploader.php 画像投稿・透過・編集機能
 
 require 'vendor/autoload.php';
+require_once __DIR__ . '/post.php';
 
 class ImageUploader{
 
@@ -20,12 +21,22 @@ class ImageUploader{
             $savePath = $this->_save($ext);
 
             //create thumbnail
-            $this->_createThumbnail($savePath);
+            // $this->_createThumbnail($savePath);
+
+            //DBに投稿の内容を登録
+            $userId = 1;
+            $rarity = $_POST['rarity'];
+            $get_place = $_POST['get_place'];
+
+            require_once __DIR__ . '/../classes/upload.php';
+            $upload = new Upload();
+            $upload->addPost($userId,$savePath,$rarity,$get_place);
 
         }catch(\Exception $e){
             echo $e->getMessage();
             exit;
         }
+
         header('Location: /garbage_collection/post/post.php');
         exit;
     }
@@ -93,7 +104,7 @@ class ImageUploader{
                 ]
             ],
             'headers' => [
-                'X-Api-Key' => 'APIキー'
+                'X-Api-Key' => ''
             ]
         ]);
         
