@@ -1,0 +1,9 @@
+post/vendor/
+
+post/composer.json
+
+post/composer.lock
+
+post/images
+
+data/
