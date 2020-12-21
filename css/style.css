@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Mv Boli', sans-serif;
+  background-color: black;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 22px 5% 12px;
+  background-color: black;
+  display: flex;
+  /* align-item: center; */
+  z-index: 5;
+}
+
+
+.top-link {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* ナビゲーション */
+.nav {
+  float: right;
+  margin-left: 500px;
+}
+
+.nav-wrapper {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+.menu {
+  padding: 0;
+  margin: 0 0 0 50px;
+  font-size: 14px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Mv Boli', sans-serif;
+  color: white;
+}
+
+.nav a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.nav a:hover::after{
+  transform: scale(1, 1);
+}
+
+.nav a.no-color-change:link,
+a.no-color-change:visited,
+a.no-color-change:hover,
+a.no-color-change:active {
+  color: black;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 100px;
+  padding-top: 2%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  z-index: 5;
+}
+
+.footer-menu li {
+  display: inline;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-menu {
+  margin-right: 27px;
+}
+
+/* フルスクリーン */
+.fullscreen {
+  background-image: url(../photos/topphoto1.jpg);
+  width: 100%;
+  height: 100vh; /* 全画面表示 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(3px);
+}
+
+
+
+.center p{
+  position: absolute;
+  float: left;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+}
+
+/* POST TOP画像 */
+.main{
+    margin: 4.7% 0 0 0;
+    height: 100%;
+    width:100%;
+}
+
+.main_image{
+    background-image: url(../photos/postimage2.png);
+    /*　↓映す画像の位置調整、拡大縮小など↓　*/
+    background-position: right 35% top 60%;
+    background-repeat: no-repeat;
+  	background-size: 100% auto;
+    width: 100%;
+    height: 45%;
+    color: white;
+}
+
+.main_image img{    /*タイトルの画像*/
+    margin: 5% 37%;
+    height: 100%;
+    width: 26%;
+    /*object-fit: fill;*/
+     /*position: relative;
+     z-index: 1;*/
+}
+
+
+/* 投稿フォーム */
+.post_form {
+  width: auto;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: white;
+  background-color: #222831;
+  line-height: 200%;
+}
+
+
+.upload {
+  font-family: 'Mv Boli', sans-serif;
+  margin-top: 10px;
+  padding: .5em 1em;
+  background-color: #222831;
+  border-radius: 50% 20%/10% 40%;
+  border: solid 3px #3e8ff7;
+  color: white;
+  font-size: 15px;
+}
+
+.upload:hover {
+  color: #3e8ff7;
+}
