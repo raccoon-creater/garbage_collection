@@ -23,25 +23,8 @@ $uploader = new ImageUploader();
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $uploader->upload();
 }
+require_once __DIR__ . '/../header.php';
 ?>
-
-<!-- 投稿画面 -->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>garbage collection</title>
-    <!-- 仮　デザイン実装後削除 ↓-->
-    <style>
-    body{
-        text-align: center;
-        font-family: Arial,sans-serif;
-    }
-    </style>
-    <!-- ここまで -->
-</head>
-<body>
     <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo h(MAX_FILE_SIZE); ?>">
         <input type="file" name="image"><br>
@@ -53,5 +36,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         入手場所：<input type="text" name="get_place"><br>
         <input type="submit" value="upload">
     </form>
-</body>
-</html>
+<?php
+require_once __DIR__ . '/../footer.php';
+?>
