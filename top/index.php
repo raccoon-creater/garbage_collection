@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/header.php';
+    require_once __DIR__ . '/../header.php';
 ?>
     <!-- 概要部分 -->
     <div class="fullscreen">
@@ -11,5 +11,5 @@
     </div>
 
 <?php
-    require_once __DIR__ . '/footer.php';
+    require_once __DIR__ . '/../footer.php';
 ?>

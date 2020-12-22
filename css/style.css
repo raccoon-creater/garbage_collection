@@ -8,8 +8,9 @@
 }
 
 body {
-  font-family: 'Mv Boli', sans-serif;
+  font-family: 'Caveat', cursive;
   background-color: black;
+  letter-spacing: 4px;  /* 文字間隔指定 */
 }
 
 /* header */
@@ -19,8 +20,6 @@ header {
   width: 100%;
   padding: 22px 5% 12px;
   background-color: black;
-  display: flex;
-  /* align-item: center; */
   z-index: 5;
 }
 
@@ -36,7 +35,6 @@ header {
 /* ナビゲーション */
 .nav {
   float: right;
-  margin-left: 500px;
 }
 
 .nav-wrapper {
@@ -59,7 +57,7 @@ header {
   display: inline-block;
   text-decoration: none;
   font-size: 20px;
-  font-family: 'Mv Boli', sans-serif;
+  font-family: 'Caveat', cursive;
   color: white;
 }
 
@@ -96,6 +94,7 @@ footer {
   color: white;
   text-align: center;
   z-index: 5;
+  line-height: 190%;
 }
 
 .footer-menu li {
@@ -171,12 +170,12 @@ footer {
   padding-bottom: 3%;
   color: white;
   background-color: #222831;
-  line-height: 200%;
+  line-height: 200%;    /* 行間隔 */
 }
 
 
 .upload {
-  font-family: 'Mv Boli', sans-serif;
+  font-family: 'Caveat', cursive;
   margin-top: 10px;
   padding: .5em 1em;
   background-color: #222831;
@@ -188,4 +187,134 @@ footer {
 
 .upload:hover {
   color: #3e8ff7;
+}
+
+/*             LIST部分              */
+.wrapper{    /*全体*/
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.contents{  /*メイン*/
+    padding-top: 4.5%;
+    height: 100%;
+    background-image: url(../photos/background/コンクリ1-1.jpg); /*ページの背景画像*/
+}
+
+/*---------メインタイトル---------*/
+.main_image{
+    background-image: url(../photos/main/buildings-1245953_1920.jpg);    /*メインタイトルの背景画像*/
+    background-position: right 35% top 60%;
+	  background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content:center;
+}
+
+.main_image img{    /*メインタイトルの画像について*/
+    padding: 3%  0;
+    height: 50%;
+    width: 26%;
+}
+
+/*---------ステッカー一覧---------*/
+.main_list{
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+/*---------ステッカー---------*/
+.sticker {
+    margin: 1%;
+    width: 170px;
+    height: auto;
+	overflow:		hidden;
+    position:		relative;
+}
+
+.sticker img{
+    background-image: url(../photos/material/コンクリ土台80.png);    /*ステッカーの背景画像*/
+    object-fit: contain;    /*長方形の画像を正方形に合わせる*/
+    width: 100%;
+    height: 100%;
+}
+
+/*---------ホバー時のマスク---------*/
+.sticker .caption {
+	font-size:		95%;
+	text-align: 		left; /*詳細情報を左寄せで表示*/
+	color:			#fff;
+}
+
+.caption{
+    margin: 8% 5%;
+    width: 90%;
+    height: 84%;
+}
+
+.caption tr{
+    font-weight: bold;
+}
+
+.caption th{
+    word-break: break-all;
+    font-weight: lighter;
+}
+
+.sticker .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;	/* 絶対位置指定 */
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない判定 */
+	background-color:	rgba(0, 0, 0, 0.76);	/* マスクの色 */
+	-webkit-transition:	all 0.2s ease;
+	transition:		all 0.2s ease;
+}
+
+.sticker:hover .mask {
+	opacity:		1;	/* マスクを表示する判定 */
+}
+
+/*---------ページング---------*/
+.page_button{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.page_button button{
+    width: 5%;
+    background:none;
+    border:0;
+    font-size:0;
+    line-height:0;
+    overflow:visible;
+    cursor:pointer;
+}
+
+.page_button img{
+    width: 200%;
+}
+
+.page_button button:focus { /*ボタンをクリックしたときに四角く囲まれるのを防ぐ*/
+	outline:0;
+}
+
+.page_button p{ /*ページング文字設定*/
+    /* margin-top: 0.5%; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 200%;
+    color: white;
 }
