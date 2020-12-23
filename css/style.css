@@ -10,7 +10,14 @@
 body {
   font-family: 'Caveat', cursive;
   background-color: black;
-  letter-spacing: 4px;  /* 文字間隔指定 */
+  letter-spacing: 4.5px;  /* 文字間隔指定 */
+  overflow-y: scroll;
+  -ms-overflow-style: none;       /* スクロールバー非表示　　IE Edge var */
+  scroll-behavior: none;        /* Firefox var */
+}
+
+body::-webkit-scrollbar {
+  display: none;          /* Chrome、Safari var */
 }
 
 /* header */
@@ -121,8 +128,6 @@ footer {
   filter: blur(3px);
 }
 
-
-
 .center p{
   position: absolute;
   float: left;
@@ -136,9 +141,10 @@ footer {
 
 /* POST TOP画像 */
 .main{
-    margin: 4.7% 0 0 0;
-    height: 100%;
-    width:100%;
+  position: static;
+  margin: 4.7% 0 0 0;
+  height: 100%;
+  width: 100%;
 }
 
 .main_image{
@@ -166,11 +172,11 @@ footer {
 .post_form {
   width: auto;
   text-align: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   color: white;
-  background-color: #222831;
-  line-height: 200%;    /* 行間隔 */
+  background-color: #333333;
+  line-height: 260%;    /* 行間隔 */
 }
 
 
@@ -178,11 +184,12 @@ footer {
   font-family: 'Caveat', cursive;
   margin-top: 10px;
   padding: .5em 1em;
-  background-color: #222831;
+  background-color: #333333;
   border-radius: 50% 20%/10% 40%;
   border: solid 3px #3e8ff7;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
+  letter-spacing: 2px;
 }
 
 .upload:hover {

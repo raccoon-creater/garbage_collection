@@ -1,5 +1,4 @@
 <?php
-
 //画像投稿・透過・編集機能
 require_once __DIR__ . '/uploader.php';
 require_once __DIR__ . '/../util.php';
@@ -25,17 +24,26 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 }
 require_once __DIR__ . '/../header.php';
 ?>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo h(MAX_FILE_SIZE); ?>">
-        <input type="file" name="image"><br>
-        レア度：<input type="radio" name="rarity" value="1">1
+    <!-- メイン画像部分 -->
+    <div class="main">
+        <div class="main_image">    <!-- メイン画面の画像クラス -->
+            <img src="../photos/POST.png">　<!--　メイン画面のタイトル画像  -->
+        </div>
+    </div>
+    <!-- 投稿部分 -->
+    <div class="post_form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo h(MAX_FILE_SIZE); ?>"　class="file_select">
+            <input type="file" name="image"><br>
+            Rearity：<input type="radio" name="rarity" value="1">1
             <input type="radio" name="rarity" value="2">2
             <input type="radio" name="rarity" value="3">3
             <input type="radio" name="rarity" value="4">4
             <input type="radio" name="rarity" value="5">5<br>
-        入手場所：<input type="text" name="get_place"><br>
-        <input type="submit" value="upload">
-    </form>
+            Get Place：<input type="text" name="get_place"><br>
+            <input type="submit" value="upload" class="upload">
+        </form>
+    </div>
 <?php
 require_once __DIR__ . '/../footer.php';
 ?>

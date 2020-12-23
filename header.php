@@ -19,7 +19,7 @@
             <nav class="nav">
             <ul class="nav-wrapper">
                 <li><a href="/garbage_collection/top/index.php" class="menu">TOP</a></li>
-                <li><a href="#" class="menu">POST</a></li>
+                <li><a href="/garbage_collection/post/post.php" class="menu">POST</a></li>
                 <li><a href="/garbage_collection/list/list(tree).php" class="menu">LIST</a></li>
                 <li><a href="#" class="menu">SIMULATION</a></li>
             </ul>
