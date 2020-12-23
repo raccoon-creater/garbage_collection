@@ -56,5 +56,3 @@ $lists = $list_db->get_lists($userId); //ログイン完成後、$_SESSION['user
     </div>
 </div>
 <?php require_once __DIR__ . '/../footer.php'; ?>
-</body>
-</html>
