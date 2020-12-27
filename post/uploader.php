@@ -30,7 +30,7 @@ class ImageUploader{
 
             require_once __DIR__ . '/../classes/upload.php';
             $upload = new Upload();
-            $upload->addPost($userId,$savePath,$rarity,$get_place);
+            $upload->addPost($userId,$this->_imageFileName,$rarity,$get_place);
 
         }catch(\Exception $e){
             echo $e->getMessage();
